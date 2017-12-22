@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("{0:#.###}",1.23456);
+            Console.WriteLine("{0:#,#.##}", 1235.456);
+            Console.WriteLine("{0:(+##)###-###-###}", 39123456789);
+            Console.ReadKey();
+
+        }
+    }
+}
