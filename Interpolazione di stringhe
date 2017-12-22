@@ -20,3 +20,25 @@ namespace ConsoleApp2
         }
     }
 }
+================================================================
+FORMATTARE DATA
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DateTime dt = DateTime.Now;
+            string su = "L'ora esatta";
+            Console.WriteLine($"Sono {su} ore {dt:HH:mm:ss}");
+            Console.ReadKey();
+        }
+    }
+}
