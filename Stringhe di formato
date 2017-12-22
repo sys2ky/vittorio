@@ -1,1 +1,19 @@
-string formato = "ciao {0}";
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string formato = "ciao {0}, ecco il numero {1}";
+            Console.WriteLine(formato, "Mtilda", 123);
+            Console.ReadKey();
+
+        }
+    }
+}
