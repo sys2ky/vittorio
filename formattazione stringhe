@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region color
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            #endregion
+            double val = 123.456789D;
+            Console.WriteLine(" currency:           {0:C2}", val);
+            Console.WriteLine(" decimal:            {0:D5}", 123);
+            Console.WriteLine(" esponenziale:       {0:E2}", val);
+            Console.WriteLine(" virgola fissa:      {0:F3}", val);
+            Console.WriteLine(" generale:           {0:G}", val);
+            Console.WriteLine(" numerico:           {0:N6}", 123456789.123456789);
+            Console.WriteLine(" percentuale:        {0:P2}", 0.123);
+            Console.WriteLine(" round trip:         {0:R}", val);
+            Console.WriteLine(" esadecimale:        {0:X}", 123);
+           // Console.WriteLine("|{0, -15 }|", num);
+            Console.ReadKey();
+        }
+    }
+}
