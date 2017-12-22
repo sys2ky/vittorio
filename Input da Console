@@ -22,3 +22,28 @@ namespace ConsoleApp3
         }
     }
 }
+====================================================================
+
+NUMERI:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("primo numero");
+            int primo = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("secondo numero");
+            int secondo = Int32.Parse(Console.ReadLine());
+            Int32 terzo = primo * secondo;
+            Console.WriteLine($"La moltiplicazione dei 2  numeri :{primo} e {secondo} Diventa {terzo}");
+            Console.ReadKey();
+        }
+    }
+}
