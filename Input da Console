@@ -1,0 +1,24 @@
+SRTINGHE:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Inserisci nome");
+            string str = Console.ReadLine();
+            Console.WriteLine("ora eta");
+            string str1 = Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Ciao {0},hai {1}anni", str,str1);
+            Console.ReadKey();
+        }
+    }
+}
