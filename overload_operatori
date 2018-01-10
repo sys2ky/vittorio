@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+
+        {
+            ComplexNumber z1 = new ComplexNumber(1, 6);
+            ComplexNumber z2 = new ComplexNumber(7, 3);
+            ComplexNumber somma = z1.Add(z2);
+            ComplexNumber somma1 = z1+z2;
+            Console.WriteLine(somma);
+            Console.WriteLine(somma1);
+            Console.ReadKey();
+
+        }
+    }
+    class ComplexNumber
+    {
+        private int real;
+        private int immaginary;
+
+        public ComplexNumber(int r , int i)
+        {
+            real = r;
+            immaginary = i;
+        }
+        
+        public override string ToString()
+        {
+            if (immaginary >0)
+
+            return string.Format("{0}+{1}i",this.real, this.immaginary);
+            else return string.Format("{0}-{1}i", this.real, -this.immaginary);
+        }
+
+        public ComplexNumber Add(ComplexNumber z2)
+        {
+            return new ComplexNumber(this.real+ z2.real, this.immaginary + z2.immaginary);
+        }
+        public static ComplexNumber operator + (ComplexNumber z1 ,ComplexNumber z2)
+        {
+            return new ComplexNumber(z1.real + z2.real, z1.immaginary + z2.immaginary);
+        }
+    }
+    
+}
