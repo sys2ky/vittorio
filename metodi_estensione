@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Extensions;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            string str = "123.45";
+            bool isnumeric = str.IsNumeric();
+            Console.WriteLine(isnumeric);
+            Console.ReadKey();
+
+        }
+    }
+    public class StringHelper
+    {
+        public static bool IsNumeric(string str)
+        {
+            double res;
+            return double.TryParse(str, out res);
+        }
+    }
+
+    
+
+}
+namespace Extensions
+{
+    public static class StringExtensions
+    {
+        public static bool IsNumeric(this string str)
+        {
+            double res;
+            return double.TryParse(str, out res);
+        }
+    }
+}
