@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Smartphone phone = new Smartphone(DateTime.Now) { Marca = "cazzo", Modello = "figa" };
+            Console.WriteLine(phone.creationTime);
+            Console.WriteLine(phone.Marca);
+            Console.WriteLine(phone.Modello);
+            Console.ReadKey();
+        }
+    }
+    class Smartphone
+    {
+        public string Marca { get; set; }
+        public string Modello { get; set; }
+        public DateTime creationTime { get; set; }
+        //private DateTime creationTime;
+
+        public Smartphone(): this(DateTime.Now)
+        {
+        }
+        public Smartphone(DateTime dt)
+        {
+            creationTime = dt;
+        }
+
+    }
+}
